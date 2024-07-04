@@ -20,17 +20,13 @@ def generate_soundex(name):
     prev_code = get_soundex_code(soundex)
 
     for char in name[1:]:
-        if len(soundex) == 4:
+        if len(soundex) >= 4:
             break
 
         code = get_soundex_code(char)
-        if code == '0' or code == prev_code:
-            continue
-
-        soundex += code
-        prev_code = code
+        if code != '0' and code != prev_code:
+            soundex += code
+            prev_code = code
 
     # Pad with zeros if necessary
-    soundex = soundex.ljust(4, '0')
-
-    return soundex
+    return soundex.ljust(4, '0')
