@@ -13,20 +13,22 @@ def get_soundex_code(c):
 
 def generate_soundex(name):
     if not name:
-        return ""
+        return "0000"
 
-    # Start with the first letter (capitalized)
     soundex = name[0].upper()
     prev_code = get_soundex_code(soundex)
-
-    for char in name[1:]:
-        if len(soundex) >= 4:
-            break
-
+    
+    def update_soundex(char, prev_code, soundex):
         code = get_soundex_code(char)
         if code != '0' and code != prev_code:
             soundex += code
             prev_code = code
+        return prev_code, soundex
 
-    # Pad with zeros if necessary
+    for char in name[1:]:
+        if len(soundex) >= 4:
+            break
+        prev_code, soundex = update_soundex(char, prev_code, soundex)
+
     return soundex.ljust(4, '0')
+
