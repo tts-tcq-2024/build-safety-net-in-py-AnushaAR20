@@ -15,7 +15,7 @@ def test_vowels(self):
 def test_specialchar(self):
         self.assertEqual(generate_soundex("#"), "0000")
     
-def test_specialchar(self):
+def test_word(self):
         self.assertEqual(generate_soundex("Pfister"), "P123")
 
 
