@@ -26,6 +26,10 @@ class TestSoundex(unittest.TestCase):
         
     def empty(self):
                 self.assertEqual(generate_soundex(""), "")
+
+    def zero(self):
+                self.assertEqual(generate_soundex("0"), "0000")
+        
         
      
 
