@@ -28,7 +28,7 @@ class TestSoundex(unittest.TestCase):
     #     self.assertEqual(generate_soundex("Ltcvnrl"), "L321")
     
     def empty(self):
-        self.assertEqual(generate_soundex(NULL), "")
+        self.assertEqual(generate_soundex("Ashcroft"), "A621")
 
     def empty(self):
         self.assertEqual(generate_soundex("abfcg"), "")
