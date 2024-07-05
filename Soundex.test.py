@@ -18,21 +18,11 @@ class TestSoundex(unittest.TestCase):
     def test_word(self):
             self.assertEqual(generate_soundex("Pond"), "P530")
 
-    # def test_word2(self):
-    #             self.assertEqual(generate_soundex("b#tg"), "B320")
-
     def test_word3(self):
             self.assertEqual(generate_soundex("Lbrl"), "L164")
         
     def empty(self):
                 self.assertEqual(generate_soundex(""), "")
-
-    def zero(self):
-                self.assertEqual(generate_soundex("0"), "0000")
-        
-        
-     
-
 
     
 if __name__ == '__main__':
