@@ -22,7 +22,7 @@ class TestSoundex(unittest.TestCase):
                 self.assertEqual(generate_soundex("b#tg"), "B320")
 
     def test_word3(self):
-            self.assertEqual(generate_soundex("LALR"), "L046")
+            self.assertEqual(generate_soundex("Lbrl"), "L164")
         
     def empty(self):
                 self.assertEqual(generate_soundex(""), "")
