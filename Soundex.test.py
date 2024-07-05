@@ -7,22 +7,25 @@ class TestSoundex(unittest.TestCase):
     #     self.assertEqual(generate_soundex(""), "")
 
     def test_single_character(self):
-            self.assertEqual(generate_soundex("A"), "A000")
+        self.assertEqual(generate_soundex("A"), "A000")
     
     def test_vowels(self):
-            self.assertEqual(generate_soundex("AEIOU"), "A000")
+        self.assertEqual(generate_soundex("AEIOU"), "A000")
     
     def test_specialchar(self):
-            self.assertEqual(generate_soundex("#"), "#000")
+        self.assertEqual(generate_soundex("#"), "#000")
         
     def test_word(self):
-            self.assertEqual(generate_soundex("Pond"), "P530")
+        self.assertEqual(generate_soundex("Pond"), "P530")
 
     def test_word3(self):
-            self.assertEqual(generate_soundex("Lbrl"), "L164")
+        self.assertEqual(generate_soundex("Lbrl"), "L164")
         
     def empty(self):
-                self.assertEqual(generate_soundex(""), "")
+        self.assertEqual(generate_soundex(""), "")
+
+    def empty(self):
+        self.assertEqual(generate_soundex("Ltcvnrl"), "L321")
 
     
 if __name__ == '__main__':
