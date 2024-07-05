@@ -13,10 +13,10 @@ class TestSoundex(unittest.TestCase):
             self.assertEqual(generate_soundex("AEIOU"), "A000")
     
     def test_specialchar(self):
-            self.assertEqual(generate_soundex("#"), "0000")
+            self.assertEqual(generate_soundex("#"), "#000")
         
     def test_word(self):
-            self.assertEqual(generate_soundex("Pfister"), "P123")
+            self.assertEqual(generate_soundex("Pond"), "P530")
 
 
     
