@@ -20,6 +20,9 @@ class TestSoundex(unittest.TestCase):
 
     def test_word3(self):
         self.assertEqual(generate_soundex("Ltcvnrl"), "L321")
+
+    def test_repitition(self):
+        self.assertEqual(generate_soundex("Rrrrrr"), "R6666")
     
     
 if __name__ == '__main__':
